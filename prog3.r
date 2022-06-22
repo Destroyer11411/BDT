@@ -1,0 +1,64 @@
+# data()
+# head(mtcars)
+# r<-nrow(mtcars)
+# c<-ncol(mtcars)
+# r
+# c
+# aut<-as.integer(0)
+# man<-as.integer(0)
+# x<-data.frame(mtcars)
+# x
+# for (i in 1:r){
+#   ifelse(x$am[i]==0,aut<-aut+1,man<-man+1)
+# }
+# ifelse(aut>man,"automatic more","manual more")
+# with(mtcars,scatter.smooth(hp,wt))
+# am<-as.integer(x$am)
+# cyl<-as.integer(x$cyl)
+# vs<-as.integer(x$vs)
+# newmtc<-data.frame(am,cyl,vs)
+# newmtc
+# for (i in 1:r) {
+#   if(newmtc$cyl[i]<5)
+#     print(newmtc[i,])
+# }
+# 
+
+
+
+data()
+
+head(mtcars)
+r<-nrow(mtcars)
+c<-ncol(mtcars)
+r
+c
+
+
+aut <- as.integer(0)
+man <- as.integer(0)
+
+x<- data.frame(mtcars)
+
+for(i in 1:r){
+  ifelse(x$am[i]==0,aut<-aut+1,man<-man+1)
+  
+}
+
+ifelse(aut>man,"Automatic are more","Manual are more")
+
+with(mtcars,scatter.smooth(hp,wt))
+
+am <-as.integer(x$am)
+cyl <- as.integer(x$cyl)
+vs <- as.integer(x$vs)
+
+newmt <- data.frame(am,cyl,vs)
+
+for(i in 1:r){
+  if(newmt$cyl[i]<5){
+    print(newmt[i,])
+  }
+}
+
+
